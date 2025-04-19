@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Management - School Management System</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>School Management System</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="students.html" class="active">Students</a></li>
+          <li><a href="teachers.html">Teachers</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="attendance.html">Attendance</a></li>
+          <li><a href="exams.html">Exams</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="students-section">
+        <h2>Student Management</h2>
+
+        <div class="form-container">
+          <h3 id="form-title">Add New Student</h3>
+          <form id="student-form">
+            <input type="hidden" id="edit-mode" value="false" />
+
+            <div class="form-group">
+              <label for="student-id">Student ID:</label>
+              <input type="text" id="student-id" required />
+            </div>
+
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="age">Age:</label>
+              <input type="number" id="age" required />
+            </div>
+
+            <div class="form-group">
+              <label for="class">Class:</label>
+              <input type="text" id="class" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contact">Contact Number:</label>
+              <input type="text" id="contact" required />
+            </div>
+
+            <div class="form-group">
+              <label for="address">Address:</label>
+              <textarea id="address" required></textarea>
+            </div>
+
+            <div class="form-buttons">
+              <button type="submit" class="btn btn-primary" id="submit-btn">
+                Add Student
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                id="cancel-btn"
+                style="display: none"
+              >
+                Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="table-container">
+          <div class="table-header">
+            <h3>Student List</h3>
+            <div class="search-container">
+              <input
+                type="text"
+                id="search-student"
+                placeholder="Search students..."
+              />
+            </div>
+          </div>
+
+          <table id="students-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Class</th>
+                <th>Contact</th>
+                <th>Address</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="students-list">
+              <!-- Student data will be loaded here -->
+            </tbody>
+          </table>
+
+          <div id="pagination" class="pagination">
+            <!-- Pagination controls will be added here -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 School Management System - DBMS Mini Project</p>
+    </footer>
+
+    <script src="js/students.js"></script>
+  </body>
+</html>
